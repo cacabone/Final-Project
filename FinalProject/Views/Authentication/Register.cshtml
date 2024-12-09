@@ -1,0 +1,37 @@
+﻿@{
+	ViewData["Title"] = "Sign Up for a new account";
+}
+
+<div class="row">
+	<div class="col-md-6 offset-md-3">
+		<h4>Register a new account</h4>
+
+
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<form asp-controller="Authentication" asp-action="Register">
+
+					<div>
+						<label >Full Name</label>
+						<input type="text" class="form-control" id="fullName" placeholder="Enter Full Name" />
+					</div>
+
+					<div>
+						<label>Email Address</label>
+						<input type="email" class="form-control" id="emailAddres" placeholder="Enter Email" />
+					</div>
+
+					<div>
+						<label>Password</label>
+						<input type="password" class="form-control" id="password" placeholder="Enter Password" />
+					</div>
+					<div>
+						<label>Confirm Password</label>
+						<input type="password" class="form-control" id="confirmPassword" placeholder="Re-Enter Password" />
+					</div>
+					<button type="submit" class="btn btn-outline-success mt-2">Register</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

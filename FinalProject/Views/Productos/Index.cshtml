@@ -1,0 +1,72 @@
+﻿@{
+	ViewData["Title"] = "Products";
+}
+
+<div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">
+					Id
+				</th>
+				<th scope="col">
+					Name
+				</th>
+				<th scope="col">
+					Description
+				</th>
+				<th scope="col">
+					Price
+				</th>
+				<th scope="col">
+					Stock
+				</th>
+				<th scope="col">
+					Category
+				</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Test</td>
+				<td>Test</td>
+				<td>100</td>
+				<td>10</td>
+				<td>Test</td>
+				<td>
+					<a class="btn btn-outline-warning" asp-controller="Productos" asp-action="Edit">Edit</a>
+				</td>
+				<td>
+					<a class="btn btn-outline-secondary" asp-controller="Productos" asp-action="Details">Details</a>
+				</td>
+				<td>
+					<a class="btn btn-outline-danger" asp-controller="Productos" asp-action="Delete">Delete</a>
+				</td>							
+			</tr>
+
+			<tr>
+				<td>1</td>
+				<td>Test</td>
+				<td>Test</td>
+				<td>100</td>
+				<td>10</td>
+				<td>Test</td>
+				<td>
+					<a class="btn btn-outline-warning" asp-controller="Productos" asp-action="Edit">Edit</a>
+				</td>
+				<td>
+					<a class="btn btn-outline-secondary" asp-controller="Productos" asp-action="Details">Details</a>
+				</td>
+				<td>
+					<a class="btn btn-outline-danger" asp-controller="Productos" asp-action="Delete">Delete</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="container">
+	<a class="btn btn-outline-success" asp-controller="Productos" asp-action="Index">Save</a>
+</div>

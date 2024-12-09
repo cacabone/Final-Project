@@ -1,0 +1,49 @@
+﻿@model List<User>;
+
+@{
+	ViewData["Title"] = "All Users";
+}
+@foreach (var userdata in Model)
+{							
+	<div class="container">
+		<div class="row row-cols-1 row-cols-md-1 g-4">
+			<div class="col">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">@userdata.Id</h5>
+						<p class="card-text">This is an: User</p>
+					
+						<p class="d-inline-flex gap-1">
+							<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+								Details
+							</a>
+						</p>
+						<div class="collapse" id="collapseExample">
+							<div class="card card-body">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Id</th>
+											<th>Name</th>
+											<th>Email</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>										
+												<td>@userdata.Id</td>
+												<td>@userdata.Name</td>
+												<td>@userdata.Email</td>
+												<td>
+													<a class="btn btn-outline-danger" asp-controller="Authentication" asp-action="Remove" asp-route-RemoveUser="@userdata.Id">Remove</a>
+												</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+}
